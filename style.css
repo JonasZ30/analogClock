@@ -1,19 +1,28 @@
+/*
+*/
+
 body {
-    display: flex;
+    display: grid;
     justify-content: center;
+    justify-items: center;
     align-items: center;
-    min-height: 100vh; 
-    margin: 0;
-    background-color: rgb(46, 46, 46);
+    min-height: 100vh;
+    background-color: rgb(66, 66, 66)
+}
+
+body:hover {
+    background-color: rgb(0, 0, 0);
+    transition: 3s;
+    opacity: 1s;
 }
 
 .clock {
-    width: 50vmin; 
-    height: 50vmin; 
-    border: 2vmin solid #1b1919; 
+    width: 50vmin;
+    height: 50vmin;
+    border: 2vmin solid #282626;
     border-radius: 50%;
     position: relative;
-    
+
 }
 
 .outer-clock-face {
@@ -23,15 +32,17 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-  }
-  .outer-clock-face::after {
+}
+
+.outer-clock-face::after {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     transform: rotate(90deg)
-  }
-  .outer-clock-face::after,
-  .outer-clock-face::before,
-  .outer-clock-face .marking{
+}
+
+.outer-clock-face::after,
+.outer-clock-face::before,
+.outer-clock-face .marking {
     content: '';
     position: absolute;
     width: 7px;
@@ -39,30 +50,32 @@ body {
     background: darkblue;
     z-index: 0;
     left: 49%;
-  }
+}
 
-  .outer-clock-face .marking{
+.outer-clock-face .marking {
     background: gray;
-  }
-  .outer-clock-face .marking.marking-one {
+}
+
+.outer-clock-face .marking.marking-one {
     transform: rotate(30deg)
-  }
-  
-  .outer-clock-face .marking.marking-two {
+}
+
+.outer-clock-face .marking.marking-two {
 
     transform: rotate(60deg)
-  }
-  
-  .outer-clock-face .marking.marking-three {
+}
+
+.outer-clock-face .marking.marking-three {
 
     transform: rotate(120deg)
-  }
-  
-  .outer-clock-face .marking.marking-four {
+}
+
+.outer-clock-face .marking.marking-four {
 
     transform: rotate(150deg)
-  }
-  .inner-clock-face {
+}
+
+.inner-clock-face {
     position: absolute;
     top: 10%;
     left: 10%;
@@ -73,29 +86,54 @@ body {
     -moz-border-radius: 100%;
     border-radius: 100%;
     z-index: 1;
-  }
+}
 
 
 .hand {
     width: 100%;
     right: 50%;
-    height: 2%; 
+    height: 2%;
     background: #4ea3f7e3;
     position: absolute;
     top: 50%;
-    border-radius: 1vmin; 
+    border-radius: 1vmin;
     transform-origin: 100%;
 }
 
 .hand.hour-hand {
-    width: 21%; 
+    width: 21%;
 }
 
 .hand.min-hand {
-    width: 31%; 
+    width: 31%;
 }
 
 .hand.second-hand {
-    width: 40%; 
+    width: 40%;
     background: red;
+}
+
+p { 
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+    font-family: verdana; 
+    font-size: 100%; 
+    color: rgb(66, 66, 66); 
+    border: 4px solid; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-weight: bold;
+    transition: transform .8s;
+ } 
+ p:hover { 
+     background-size: auto; 
+     background-repeat: no-repeat; 
+     background-position: center; 
+     transition: 1s;
+     opacity: 1; 
+     border-color: white; 
+     color: white; 
+     transform: scale(2);
+    
 }

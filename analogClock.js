@@ -20,3 +20,30 @@ function setDate(){
 setInterval(setDate, 1000);
 
 setDate();
+
+
+const now = new Date();
+const hours = now.getHours();
+const mins = now.getMinutes();
+const seconds = now.getSeconds();
+
+document.write(`<p>Zeit in Zürich: ${now}</p>`);
+setInterval(document.write, 1000);
+
+
+const newYorkTimeZone = 'America/New_York';
+
+// Optionen für das Datumsformat
+const options = {
+    timeZone: newYorkTimeZone,
+    hour12: false, // 24-Stunden-Format
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+};
+
+// Aktuelle Zeit von New York abrufen und formatieren
+const newYorkTime = new Date().toLocaleString('en-US', options);
+
+// Anzeige der Zeit von New York im HTML-Dokument
+document.write(`<p>Aktuelle Zeit in New York: ${newYorkTime}</p>`);
