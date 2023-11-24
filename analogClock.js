@@ -50,3 +50,4 @@ const newYorkTime = new Date().toLocaleString('en-US', options);
 
 //Write in the HTML-Document
 document.write(`<p>Aktuelle Zeit in New York: ${newYorkTime}</p>`);
+
