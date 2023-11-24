@@ -1,30 +1,38 @@
-/*
+/* 
+   Layout and styling for the entire page.
 */
-
 body {
     display: grid;
     justify-content: center;
     justify-items: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(66, 66, 66)
+    background-color: rgb(66, 66, 66);
 }
 
+/* 
+   Background transition effect when hovering over the page.
+*/
 body:hover {
     background-color: rgb(0, 0, 0);
     transition: 3s;
     opacity: 1s;
 }
 
+/* 
+   Styling for the main clock container.
+*/
 .clock {
     width: 50vmin;
     height: 50vmin;
     border: 2vmin solid #282626;
     border-radius: 50%;
     position: relative;
-
 }
 
+/* 
+   Styling for the outer part of the clock face, including markings.
+*/
 .outer-clock-face {
     position: relative;
     background: #403f3f;
@@ -34,10 +42,13 @@ body:hover {
     border-radius: 100%;
 }
 
+/* 
+   Rotates the outer clock face by 90 degrees for correct positioning.
+*/
 .outer-clock-face::after {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
-    transform: rotate(90deg)
+    transform: rotate(90deg);
 }
 
 .outer-clock-face::after,
@@ -52,29 +63,32 @@ body:hover {
     left: 49%;
 }
 
+/* 
+   Styles for clock face markings with different rotation angles.
+*/
 .outer-clock-face .marking {
     background: gray;
 }
 
 .outer-clock-face .marking.marking-one {
-    transform: rotate(30deg)
+    transform: rotate(30deg);
 }
 
 .outer-clock-face .marking.marking-two {
-
-    transform: rotate(60deg)
+    transform: rotate(60deg);
 }
 
 .outer-clock-face .marking.marking-three {
-
-    transform: rotate(120deg)
+    transform: rotate(120deg);
 }
 
 .outer-clock-face .marking.marking-four {
-
-    transform: rotate(150deg)
+    transform: rotate(150deg);
 }
 
+/* 
+   Styling for the inner part of the clock face.
+*/
 .inner-clock-face {
     position: absolute;
     top: 10%;
@@ -88,7 +102,9 @@ body:hover {
     z-index: 1;
 }
 
-
+/* 
+   Styling for clock hands.
+*/
 .hand {
     width: 100%;
     right: 50%;
@@ -113,6 +129,9 @@ body:hover {
     background: red;
 }
 
+/* 
+   Styling for the text.
+*/
 p { 
     display: grid; 
     justify-content: center;
@@ -125,15 +144,18 @@ p {
     padding: 10px; 
     font-weight: bold;
     transition: transform .8s;
- } 
- p:hover { 
-     background-size: auto; 
-     background-repeat: no-repeat; 
-     background-position: center; 
-     transition: 1s;
-     opacity: 1; 
-     border-color: white; 
-     color: white; 
-     transform: scale(2);
-    
+} 
+
+/* 
+   Hover effects for paragraphs.
+*/
+p:hover { 
+    background-size: auto; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    transition: 1s;
+    opacity: 1; 
+    border-color: white; 
+    color: white; 
+    transform: scale(2);
 }
